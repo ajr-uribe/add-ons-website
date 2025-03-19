@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script src="https://kit.fontawesome.com/00cf3acb71.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portafolio de Proyectos</title>
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+  <div class="barra-lateral">
+    <div>
+      <div class="nombre-pagina">
+        <i class="fa-solid fa-angles-right" id="icon"></i>
+        <span>Addons</span>
+      </div>
+      <button class="boton" id="btnNuevoProyecto">
+        <i class="fa-solid fa-plus"></i>
+        <span>Create New</span>
+      </button>
+    </div>
+    <nav class="navegacion">
+      <ul>
+        <li>
+          <a id="mail" href="#">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Mail</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-star"></i>
+            <span>Favorites</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-tag"></i>
+            <span>New Publishes</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <span>Rate Us</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>Published</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-heart"></i>
+            <span>Socials</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-fire"></i>
+            <span>Soon...</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div>
+      <div class="linea"></div>
+
+      <div class="modo-oscuro">
+        <div class="info">
+          <i class="fa-regular fa-moon"></i>
+          <span>Dark Mode </span>
+        </div>
+        <div class="switch">
+          <div class="base">
+            <div class="circulo"></div>
+          </div>
+        </div>
+      </div>
+      <div class="usuario">
+        <img src="/imagenes/user.png">
+        <div class="info-usuario">
+          <div class="nombre-email">
+            <span class="nombre">A.J.R._.URIBE</span>
+            <span class="email">anthonyuribe3456@gmail.com</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </div>
+    </div>
+  </div>
+  <main>
+    <section class="addon" id="listaProyectos">
+      <!-- Aquí se mostrarán los proyectos -->
+    </section>
+    <section id="formularioProyecto" style="display: none;">
+      <h2>Agregar Nuevo Proyecto</h2>
+      <form id="proyectoForm">
+        <input type="text" id="nombreProyecto" placeholder="Nombre del proyecto (Max: 100)" maxlength="100" required>
+        <input type="file" id="imagenProyecto" accept="image/*" required>
+        <input type="date" id="fechaProyecto" required>
+        <input type="file" id="archivoProyecto" required>
+        <button type="submit">Agregar Proyecto</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="Scripts.js"></script>
+</body>
+</html>
