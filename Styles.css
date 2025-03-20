@@ -368,3 +368,20 @@ main {
 #formularioProyecto button:hover {
   background: var(--color-menu-hover);
 }
+
+/* Estilos para el botón de eliminar */
+.btnEliminar {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btnEliminar:hover {
+  background-color: #cc0000;
+}
