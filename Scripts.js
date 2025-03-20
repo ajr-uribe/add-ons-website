@@ -75,7 +75,8 @@ proyectoForm.addEventListener("submit", (e) => {
 function guardarProyecto(proyecto) {
   let proyectos = JSON.parse(localStorage.getItem("proyectos")) || [];
   proyectos.push(proyecto);
-  localStorage.setItem("proyectos", JSON.stringify(proyectos));
+  localStorage.setItem("proyectos",
+    JSON.stringify(proyectos));
 }
 
 // Cargar proyectos desde localStorage
@@ -89,20 +90,21 @@ function mostrarProyecto(proyecto) {
   const proyectoDiv = document.createElement("div");
   proyectoDiv.classList.add("proyecto");
   proyectoDiv.innerHTML = `
-    <h3>${proyecto.nombre}</h3>
-    <img src="${proyecto.imagenURL}" alt="${proyecto.nombre}" style="max-width: 100%; height: auto;">
-    <p>Fecha de publicación: ${proyecto.fecha}</p>
-    <a href="${proyecto.archivoURL}" download="${proyecto.nombre}.zip">Descargar Archivo</a>
-    <button class="btnEliminar">Eliminar</button>
+  <h3>${proyecto.nombre}</h3>
+  <img src="${proyecto.imagenURL}" alt="${proyecto.nombre}" style="max-width: 100%; height: auto;">
+  <p>Fecha de publicación: ${proyecto.fecha}</p>
+  <a href="${proyecto.archivoURL}" download="${proyecto.nombre}.zip">Descargar Archivo</a>
+  <button class="btnEliminar">Eliminar</button>
   `;
 
   // Agregar evento de eliminación
   const btnEliminar = proyectoDiv.querySelector(".btnEliminar");
-  btnEliminar.addEventListener("click", () => {
-    if (confirm("¿Estás seguro de que quieres eliminar este proyecto?")) {
-      eliminarProyecto(proyecto, proyectoDiv);
-    }
-  });
+  btnEliminar.addEventListener("click",
+    () => {
+      if (confirm("¿Estás seguro de que quieres eliminar este proyecto?")) {
+        eliminarProyecto(proyecto, proyectoDiv);
+      }
+    });
 
   listaProyectos.appendChild(proyectoDiv);
 }
@@ -111,6 +113,7 @@ function mostrarProyecto(proyecto) {
 function eliminarProyecto(proyecto, proyectoDiv) {
   let proyectos = JSON.parse(localStorage.getItem("proyectos")) || [];
   proyectos = proyectos.filter((p) => p.nombre !== proyecto.nombre);
-  localStorage.setItem("proyectos", JSON.stringify(proyectos));
+  localStorage.setItem("proyectos",
+    JSON.stringify(proyectos));
   proyectoDiv.remove();
 }
