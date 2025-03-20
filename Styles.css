@@ -309,6 +309,7 @@ main {
   margin-bottom: 15px;
   border-radius: 10px;
   background-color: var(--color-barra-lateral);
+  overflow: scroll;
 }
 
 .proyecto img {
